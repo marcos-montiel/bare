@@ -1,55 +1,71 @@
-# ✋ Contributing to Bare
+# 🛠️ Contributing to Bare
 
-Yo! Welcome to **Bare** — a weird little language for people who wanna make things **clear**, **explicit**, and a little chaotic (but in a good way).
-
-We’re here to experiment. If you’ve got ideas, code, docs, memes, or weird concepts — you’re in.
+Yo! Thanks for stopping by — whether you wanna smash bugs, build wild new features, or just vibe with the project, you're welcome here. Bare is an experimental playground, and **your ideas matter**.
 
 ---
 
-## 🛠️ How to Contribute
+## 📦 What Can You Contribute?
 
-1. **Fork it.**
-2. Make a branch: `git checkout -b feature/your-idea`
-3. Write your madness.
-4. Run tests (if you added any)
-5. Commit it: `git commit -m "Add feature: bananas compiler mode 🍌"`
-6. Push it: `git push origin feature/your-idea`
-7. Open a pull request and tell us what you did.
+- 📜 **Language Design Ideas** — syntax tweaks, core concepts, compile-time features.
+- 📝 **Docs Improvements** — clearer wording, better examples, typo fixes.
+- 🛠️ **Compiler Code** — written in **Zig** for now, eventually in **Bare** itself.
+- 🧪 **Tests & Tools** — test cases, small utilities, code explorers.
+- 🗣️ **Discussions** — crazy concepts, weird edge cases, bold experiments.
 
 ---
 
-## 🎨 What You Can Work On
+## 📖 How to Get Started
 
-- Language syntax ideas  
-- Compiler internals (currently Zig-based)  
-- Standard library designs  
-- Docs, guides, README improvements  
-- Experimental `.bb` library ideas  
-- `rough` LSP features  
-- Build system tools (`naked` CLI improvements)
-- Project templates / starter kits
-- Compile-time tricks / experiments
-
----
-
-## 📏 Code Style
-
-- **No hidden control flow**  
-- **No implicit behavior**  
-- Clear, readable code over clever hacks  
-- If it’s magic… kill it  
-- Comments are good. Weird ASCII art is better.
+1. **Fork the repo.**  
+2. **Clone your fork.**  
+   ```bash
+   git clone https://github.com/marcos-montiel/bare.git
+   cd bare
+   ```
+3. **Check out the open issues** or make your own!
+4. **Follow the Code of Conduct.**  
+   Be cool. Build cool.
 
 ---
 
-## 🤝 Code of Conduct
+## 🔨 Project Structure (for now)
 
-Don't be a jerk. Be excellent to each other. This is a creative space for curious nerds.
+- `src/` — compiler sources (written in Zig)
+- `spec/` — language design notes and drafts
+- `examples/` — Bare code examples
+- `docs/` — documentation files
 
 ---
 
-## 📣 Open Discussions
+## 🚀 Build & Test
 
-Got something wild?  
-Open a **Discussion** or **Issue** with the `idea 💡` label.  
-We’d love to hear your unhinged language design takes.
+- To build:
+  ```bash
+  zig build
+  ```
+- To run tests:
+  ```bash
+  zig build test
+  ```
+
+**Note:** Until Bare can compile itself, we use **Zig** for its clarity, speed, and no-magic approach.
+
+---
+
+## 🛑 Before You PR…
+
+- Keep it **clear and honest** — no hidden side effects, no clever hacks-for-the-sake-of-hacks.
+- Follow the **Bare vibe** — clarity and control over convenience and magic.
+- If it’s experimental, mark it experimental! We love weird ideas.
+- Include **comments and docs** where things might get fuzzy.
+
+---
+
+## 🤝 Join the Conversation
+
+We're figuring this thing out together. Drop by [issues](https://github.com/marcos-montiel/bare/issues), propose ideas, ask questions — no matter how small or weird.  
+Your voice matters here.
+
+---
+
+**Stay raw. Stay clear. Stay Bare.**
