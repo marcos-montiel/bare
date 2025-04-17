@@ -44,7 +44,7 @@ func add(ref a: Vec2, ref b: Vec2) -> ref Vec2 {
 }
 
 import { print } from "std:log.br"
-import { add } to add2D from "std:math.br"
+import { add } to add2D from "./src/math.br"
 
 func main() {
     let a: ref Vec2n = alloc(Vec2)
