@@ -15,7 +15,7 @@ jobs:
     - name: Install Zig
       uses: korandoru/setup-zig@v1
       with:
-        zig-version: 0.11.0
+        zig-version: 0.14.0
 
     - name: Build naked compiler
       run: zig build
