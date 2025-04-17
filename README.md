@@ -168,10 +168,6 @@ But we’re vibin' anyway.
 ---
 
 ## 📎 Wanna Contribute?  
-- Fork it  
-- Make weird stuff  
-- Break things  
-- Suggest insane ideas  
-- Or just lurk, it’s cool  
+Go to [contributing](https://github.com/marcos-montiel/bare/.github/CONTRIBUTING.md) and see what you can do! We like fresh and cool ideas.  
 
 **Stay bare. Stay real.**
