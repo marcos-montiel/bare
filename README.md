@@ -32,31 +32,36 @@ Bare is **simple** — not necessarily **easy**. It’s about **knowing exactly 
 
 ```bare
 block Vec2 {
-    x: i32
+    x: i32,
     y: i32
 }
 
-func add(ref a: Vec2, ref b: Vec2) -> Vec2 {
-    let result: Vec2
+func add(ref a: Vec2, ref b: Vec2) -> ref Vec2 {
+    let result: ref Vec2 = alloc(Vec2)
     result.x = a.x + b.x
     result.y = a.y + b.y
     return result
 }
 
-import { add to add2D } from "src/math.br"
+import { print } from "src:log.br"
+import { add } to add2D from "src:math.br"
 
 func main() {
-    let a: Vec2
+    let a: ref Vec2n = alloc(Vec2)
     a.x = 5
     a.y = 10
 
-    let b: Vec2
+    let b: ref Vec2 = alloc(Vec2)
     b.x = 3
     b.y = 7
 
-    let c: Vec2 = add(a, b)
+    let c: ref Vec2 = add(a, b)
     print(c.x)
     print(c.y)
+
+    free(a)
+    free(b)
+    free(c)
 }
 ```
 
@@ -93,8 +98,15 @@ my-app/
 
 Example:
 ```bare
-import { add to add2D } from "lib:lib/libmath.bb"
+import { add } to add2D from "lib:libmath.bb"
 import { Vec2 } from "inc:thirdparty/coolstuff.br"
+```
+
+You can also import local code with a filepath with relative or full path:
+```bare
+import { Vec2 } from "/src/share/some/library/lib.bb"
+import { cool } from "./inc/someother/library/you/dont/own.br"
+    
 ```
 
 ---
@@ -121,9 +133,6 @@ naked build src/math.br --lib -o lib/libmath.bb
 
 # Run directly
 naked run src/main.br
-
-# Link libraries and build
-naked link src/main.br lib/libmath.bb -o build/my-app
 ```
 
 ---
